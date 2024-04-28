@@ -1,0 +1,69 @@
+* {
+  padding: 0;
+  margin: 0;
+
+  /*******
+    Sets the border inside the box,
+    not adding extra pixs
+     *******/
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  border: 3px dotted;
+  background-color: rgb(241, 216, 170);
+
+  /********
+    PAY ATTENTION HERE
+    ********/
+  /*
+    - now box and bo-two are flex items and
+     are no longer bock elements.
+    - default of a flex direction is set on ROW
+    */
+  display: flex;
+
+  /* flex-direction: row; */
+
+  /***
+    applies to the main axis***/
+  /* justify-content: space-evenly; */
+
+  /**
+    applies to the cross axis**/
+  /* align-items: center; */
+
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  border-radius: 10%;
+  background-color: cadetblue;
+}
+
+.box-two {
+  width: 150px;
+  height: 150px;
+  border-radius: 10%;
+  background-color: olivedrab;
+}
+
+.box-three {
+  width: 150px;
+  height: 150px;
+  border-radius: 10%;
+  background-color: chocolate;
+}
+
+.box-four {
+  width: 150px;
+  height: 150px;
+  border-radius: 10%;
+  background-color: blueviolet;
+}

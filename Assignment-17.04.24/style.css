@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: #8a8a8a;
+}
+body {
+  min-width: 451px;
+  min-height: 689px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 451px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5%;
+  background-color: white;
+  box-shadow: 5px 5px 10px #8a8a8a;
+}
+
+.image__item {
+  max-width: 451px;
+  max-height: 300.67px;
+  border-radius: 5%;
+}
+
+/* .photo__box {
+  max-width: fit-content;
+  max-height: fit-content;
+} */
+
+.top__box {
+  width: fit-content;
+  top: 167px;
+  left: 494px;
+  gap: 0px;
+  opacity: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.body__box {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+
+.middle__box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.middle__box__thumbnail {
+  width: 60px;
+  height: 60px;
+  align-self: left;
+  background-color: aquamarine;
+}
+.middle__box__text-area {
+  flex-grow: 5;
+  justify-self: right;
+}
+
+.middle__box__icon {
+  flex-grow: 0.5;
+}
+.middle__box__thumbnail {
+  border-radius: 10px;
+  background-color: #d9d9d9;
+}
+
+.bottom__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-content: space-between;
+  gap: 10px;
+}
+
+.button__box {
+  margin-top: 20px;
+  display: inline-block;
+  height: 47px;
+  border-radius: 12px;
+  background-color: #3169d8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 5px #8a8a8a;
+}
+
+.button__box a {
+  text-decoration: none;
+}
+.button__box > a > p {
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+h1 {
+  color: #3169d8;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+h2 {
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+h3 {
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 12px;
+  font-weight: 400;
+  color: black;
+}
+
+.line {
+  height: 1px;
+  background-color: #8a8a8a;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Example</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section>
+        <div class="card">
+          <!-- Card Header -->
+          <div class="card__header">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5 8.25 12l7.5-7.5"
+              />
+            </svg>
+            <strong>Order Details</strong>
+            <div></div>
+          </div>
+          <!-- Card Info -->
+          <div class="card__info">
+            <img src="/images/headphones.png" alt="product headphones" />
+            <div class="card__heading">
+              <div>
+                <h3>AKG N700NCM2</h3>
+                <span>$199.00 (~$4.00 taxes)</span>
+              </div>
+              <div class="card__controls">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+              </div>
+            </div>
+          </div>
+          <div class="card__content-wrapper">
+            <div>
+              <h4>Delivery Location</h4>
+              <div class="card__content">
+                <div class="placeholder"></div>
+                <div>
+                  <strong>Rustaveli Ave 57,</strong>
+                  <small>17-001, Batsumi</small>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <div>
+              <h4>Payment Method</h4>
+              <div class="card__content">
+                <div class="placeholder"></div>
+                <div>
+                  <strong>Visa Classic</strong>
+                  <small>****-0921</small>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="card__footer">
+            <h4>Order info</h4>
+
+            <div class="item">
+              <small>Subtotal</small>
+              <strong>$199.00</strong>
+            </div>
+            <div class="item">
+              <small>Shipping Cost</small>
+              <strong>+$10.00</strong>
+            </div>
+            <div class="item">
+              <small>Total</small>
+              <strong class="bolder">$209.00</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
