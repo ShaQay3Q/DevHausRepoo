@@ -18,3 +18,7 @@
 .four {
   background-color: coral;
 }
+
+.container {
+  display: grid;
+}
