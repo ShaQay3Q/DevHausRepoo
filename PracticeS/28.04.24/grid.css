@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.one {
+  background-color: cadetblue;
+}
+
+.two {
+  background-color: blueviolet;
+}
+
+.three {
+  background-color: chartreuse;
+}
+
+.four {
+  background-color: coral;
+}
