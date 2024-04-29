@@ -19,6 +19,35 @@
   background-color: coral;
 }
 
+.five {
+  background-color: yellow;
+}
+
+/*=================================
+    grid-template-rows/columns:
+==================================*/
+/* .container {
+  display: grid;
+  grid-template-rows: 50px 50px;
+  grid-template-columns: 50px 50px 50px;
+} */
+
+/*=================================
+    grid-template:
+==================================*/
+/* .container {
+  display: grid;
+  grid-template: 50px 50px / 50px 50px;
+} */
+
+/*=================================
+    implicit way of defining grid
+==================================*/
 .container {
   display: grid;
+  grid-template-columns: 50px 50px;
+  /*----- here the dimensions of each column and row
+  is explicitly mentioned-------*/
+  grid-auto-rows: 50px;
+  grid-auto-columns: 50px;
 }
