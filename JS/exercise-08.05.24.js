@@ -1,3 +1,6 @@
+/*================================
+    EXERCISE (array - structure)
+=================================*/
 const user = [
     {
         firstName: "john",
@@ -42,7 +45,7 @@ console.log("\n");
 
 
 /*================================
-    EXERCISE
+    EXERCISE (function)
 =================================*/
 
 //1. write a function which is adding up two numbers and returning its value
