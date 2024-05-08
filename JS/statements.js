@@ -9,15 +9,18 @@
 // If the age is above 100, it returns the string "not valid"
 
 function ageCheck(age){
+    let message;
+
     if (age>100){
         message = "not valid";
     } else if (age >= 18){
         message = "adult";
     } else if(age >= 13){
-        message = "teen";
+        message = "teenager";
     } else{
         message = "child";
     }
+
     return message;
 }
 
@@ -31,3 +34,21 @@ function checkAge(age){
 
 console.log(ageCheck(107));
 console.log(checkAge(26));
+
+const category = checkAge(15);
+
+function getDrinks(category){
+    switch (category){
+        case "child":
+            return "juice";
+        case "teenager":
+            return "not beer!";
+        case "adult":
+            return "milk";
+        case "not valid":
+            return "CHEERS!";
+    }
+}
+
+console.log(getDrinks(ageCheck(14)));
+console.log(getDrinks(checkAge(87)));
