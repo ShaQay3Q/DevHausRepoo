@@ -16,6 +16,10 @@ const origin = "europe"
 // YOUR SOLUTION //
 function animalsInEurop(listAnimals, listOrigins, origin){
     for (let i = 0; i < listAnimals.length; i++){
+        if (!origins.includes(origin)){
+            console.log("continent not found");
+            break
+        }
         if (listOrigins[i] == origin){
             console.log(listAnimals[i]);
         }
@@ -34,13 +38,17 @@ console.log("\n");
 
 function sortByContinent(listAnimals, listOrigins, origin){
     for (let i = 0; i < listAnimals.length; i++){
+        if (!origins.includes(origin)){
+            console.log("continent not found");
+            break
+        }
         if (listOrigins[i] == origin){
             console.log(listAnimals[i]);
         }
     }
 }
 
-sortByContinent(animals, origins, "africa");
+sortByContinent(animals, origins, "asia");
 
 // YOUR SOLUTION //
 // ... //
