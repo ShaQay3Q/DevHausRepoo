@@ -30,7 +30,7 @@ function isFromState(stateName){
 function usWinnersYears(listWinners){
     for (let i = 0; i < listWinners.length; i++){
         let country = listWinners[i][2];
-        if (country == "United States"){
+        if (country === "United States"){
             console.log(`${i}- winner of ${listWinners[i][0]}: ${listWinners[i][1]}`);
         }
     }
@@ -47,63 +47,31 @@ console.log("\n");
 // YOUR SOLUTION //
 
 function winnersFromCountry(listWinners, countryName){
-    console.log(`${countryName}`);
-
+    console.log(`country name: ${countryName}`)
     for (let i = 0; i < listWinners.length; i++){
         let country = listWinners[i][2];
-        if (countryName === country){
+        if (country === countryName){
             console.log(`${i}- winner of ${listWinners[i][0]}: ${listWinners[i][1]}`);
-        } else if(countryName === country){
-            console.log(`${i}- winner of ${listWinners[i][0]}: ${listWinners[i][1]}`);
-        } else if(countryName === country){
-            console.log(`${i}- winner of ${listWinners[i][0]}: ${listWinners[i][1]}`);
-        } else if(countryName === country){
-            console.log(`${i}- winner of ${listWinners[i][0]}: ${listWinners[i][1]}`);
-        } else if(!(countryName===country)) {
-            console.log("country not found!");
-            break;
         }
     }
 }
 
-winnersFromCountry(winners, "Iran");
+winnersFromCountry(winners, "Norway");
+// console.log("\n");
 
-/*function winnersBasedOnCountries(listWinners, countryName){
-    // let res = console.log(`${i}- winner of ${listWinners[i][0]}, ${listWinners[i][1]} is from ${country}`);
-    for (let i = 0; i < listWinners.length; i++){
+// function winnerBasedCountry(listWinners, countryName){
+//     for (let i = 0; i < listWinners.length; i++){
+//         let country = listWinners[i][2];
+//         let name = listWinners[i][1];
+//         let year = listWinners[i][0];
+//         switch (countryName) {
+//             case country:
+//                 console.log(`${year} - ${name} from ${country}`);
+//                 break;
+//             case !country:
+//                 break;
+//         }
+//     }
+// }
 
-        if (countryName === "United States"){
-            console.log(`${i}- winner of ${listWinners[i][0]}, ${listWinners[i][1]} is from ${listWinners[i][2]}`);
-        } else if(countryName === "Kenya"){
-            console.log(`${i}- winner of ${listWinners[i][0]}, ${listWinners[i][1]} is from ${listWinners[i][2]}`);
-        } else if(countryName === "Norway"){
-            console.log(`${i}- winner of ${listWinners[i][0]}, ${listWinners[i][1]} is from ${listWinners[i][2]}`);
-        } else if (countryName === "New Zealand"){
-            console.log(`${i}- winner of ${listWinners[i][0]}, ${listWinners[i][1]} is from ${listWinners[i][2]}`);
-        } else {
-            console.log("country not found!");
-        }
-
-        // const winner = listWinners[i];
-        // switch (countryName){
-        //     case "United States":
-        //         console.log(`${i}- winner of ${listWinners[i][0]}, ${listWinners[i][1]} is from ${countryName}`);
-        //         break;
-        //     case "Norway":
-        //          console.log(`${i}- winner of ${listWinners[i][0]}, ${listWinners[i][1]} is from ${countryName}`);
-        //          break;
-        //     case "Kenya":
-        //         console.log(`${i}- winner of ${listWinners[i][0]}, ${listWinners[i][1]} is from ${countryName}`);
-        //         break;
-        //     case "New Zealand":
-        //         console.log(`${i}- winner of ${listWinners[i][0]}, ${listWinners[i][1]} is from ${countryName}`);
-        //         break;
-        //     default:
-        //         console.log("country not found!");
-        //             break;
-        // }
-    }
-}
-
-winnersBasedOnCountries(winners, "Kenya");
-*/
+// console.log(winnerBasedCountry(winners, "Kenya"));
