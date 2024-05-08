@@ -21,4 +21,13 @@ function ageCheck(age){
     return message;
 }
 
+function checkAge(age){
+    if (age < 13) return "child";
+    else if (age <18) return "teenager";
+    else if (age < 101) return "adult";
+    else return "not valid";
+}
+
+
 console.log(ageCheck(107));
+console.log(checkAge(26));
