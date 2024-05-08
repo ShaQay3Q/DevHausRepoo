@@ -53,10 +53,20 @@ function addition(n1, n2){
     return n1 + n2;
 }
 
+function additionTwo(n1, n2){
+    return n1 + n1;
+}
+
+
 //2. write a function which is  substracting two numbers and returning its value
 function substraction(n1, n2){
     return n1 - n2;
 }
+
+function substractionTwo(n1, n2){
+    return n1 - n2;
+}
+
 
 //3. write a function which is  multiplying two numbers and returning its value
 // 4. write also a console log inside your multiplying function 
@@ -66,17 +76,32 @@ function multipication(n1, n2){
     return n1 * n2;
 }
 
+function multiplyTwo(n1, n2){
+    let res = n1 * n2;
+    console.log(`${n1} * ${n2} = ${res}\n`);
+    return res;
+}
+
+
 // 5. make a additon function call with 5 and 6
 const res1 = addition(5, 6);
 console.log(res1);
+console.log("\n");
+console.log(`${5} + ${6} = ${additionTwo(5, 6)}\n`);
+
 
 //6. make a substraction call and substract 3 from the result of your additon
 const res2 = substraction(res1, 3);
 console.log(res2);
+console.log("\n");
+console.log(`${additionTwo(5,6)} + ${3} = ${substractionTwo(additionTwo(5,6), 3)}\n`);
 
 //7. multiply the addition result and the substraction
 const res3 = multipication(res1, res2);
 
 //8. console log the endresult of multiply outside of the function
 console.log(res3);
+console.log("\n");
+console.log(`${additionTwo(5,6)} * ${substractionTwo(additionTwo(5,6), 3)} = ${multipication(additionTwo(5,6), substractionTwo(additionTwo(5,6), 3))}\n`)
+
 

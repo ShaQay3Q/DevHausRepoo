@@ -45,10 +45,12 @@ function getDrinks(category){
             return "not beer!";
         case "adult":
             return "milk";
-        case "not valid":
-            return "CHEERS!";
+        // case "not valid":
+        //     return "CHEERS!";
+        default:
+            return "granny?!";
     }
 }
 
 console.log(getDrinks(ageCheck(14)));
-console.log(getDrinks(checkAge(87)));
+console.log(getDrinks(checkAge(109)));
