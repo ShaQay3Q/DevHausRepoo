@@ -167,12 +167,35 @@ function itemSum(stockItem, amount){
         if (prop === "valueProduct"){
             let res = multipication(stockItem[prop], amount);
             console.log(`${res}`);
+            return res;
         }
     }
 }
 
 itemSum({nameProduct: "bananas", valueProduct: 0.3}, 4);
 
+function totalSum(stockList, shoppingCard){
+    let sum = 0;
+    for (let i = 0; i < shoppingCard.length; i++){
+        let item = shoppingCard[i][0];
+        let value = shoppingCard[i][1];
+        sum = itemSum(findItems(stockList, item), value) + sum;
+    }
+    return sum;
+}
+
+const costs = totalSum(price, shopping_cart2);
+
+console.log(`total costs of shopping_car2 is: ${costs}`);
+
+
+// function adjustStockBasedOnShoppingCard(stockList, shoppingCard){
+//     for (let i = 0; i < shoppingCard.length; i++){
+//         let item = shoppingCard[i][0];
+//         let value = shoppingCard[i][1];
+//         adjustStock(findItems(stockList, item), value);
+//     }
+// }
 
 
 
