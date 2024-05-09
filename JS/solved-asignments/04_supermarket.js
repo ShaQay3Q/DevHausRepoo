@@ -156,6 +156,9 @@ const price = [
 // Calculate the price for the shopping cart and save it in variable called 'price'
 shopping_cart2 = [["bananas", 4], ["milk", 1], ["bread", 2]]
 
+
+
+// YOUR SOLUTION //
 function multipication(dig1, dig2){
     return dig1 * dig2;
 }
@@ -189,16 +192,4 @@ const costs = totalSum(price, shopping_cart2);
 console.log(`total costs of shopping_car2 is: ${costs}`);
 
 
-// function adjustStockBasedOnShoppingCard(stockList, shoppingCard){
-//     for (let i = 0; i < shoppingCard.length; i++){
-//         let item = shoppingCard[i][0];
-//         let value = shoppingCard[i][1];
-//         adjustStock(findItems(stockList, item), value);
-//     }
-// }
-
-
-
-// YOUR SOLUTION //
-// ... //
 
