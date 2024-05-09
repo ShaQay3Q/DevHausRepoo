@@ -41,15 +41,12 @@ const stock = [
 // }
 
 
-
 // 2. Task: Selling items
 // Given is an array called 'shopping_cart' representing the shopping cart of a customer
 // the array contains more arrays in the form [ITEM, QUANTITY]
 shopping_cart = [["bananas", 2], ["milk", 3]]
 
 // Iterate over the array and substract the items from your stock
-
-
 
 
 // YOUR SOLUTION //
@@ -60,9 +57,18 @@ function substract(int1, int2){
 
 // console.log(substract(54, 3));
 
+// function returnItem(stockItem, itemName){
+//     for (const prop in stockItem){
+//         if (stockItem[prop] === itemName){
+//             return stockItem;
+//         }
+//     }
+// }
+
 function findItems(stockList, itemName){
     for (let i = 0; i < stockList.length; i++){
         const stockItem = stockList[i];
+        // returnItem(stockItem, itemName);
         for (const prop in stockItem){
             if (stockItem[prop] === itemName){
                 console.log(`${stockItem[prop]}. ${i}`);
@@ -70,27 +76,33 @@ function findItems(stockList, itemName){
             }
         }
     }
-
 }
 
-// findItems(stock, "milk");
+// function returnItem(stockItem, itemName){
+//     for (const prop in stockItem){
+//         if (stockItem[prop] === itemName){
+//             console.log(`${stockItem[prop]}`);
+//             return stockItem;
+//         }
+//     }
+// }
+
+
+
+findItems(stock, "milk");
 
 
 function adjustStock(stockItem, amount){
     for (const prop in stockItem){
         if (prop === "productValue"){
-           console.log(`${substract(stockItem[prop] , amount)}`);
+            let res = substract(stockItem[prop], amount);
+            console.log(`${res}`);
         }
     }
 }
 
-adjustStock(findItems(stock, "bananas"), 2);
+// adjustStock(findItems(stock, "bananas"), 2);
 
-// function findAdjustStock(stockList, itemName, itemAmount){
-//     let item = findItems(stockList, itemName);
-//     console.log(`${item}`);
-//     return adjustStock(item, itemAmount);
-// }
 
 function adjustStockBasedOnShoppingCard(stockList, shoppingCard){
     for (let i = 0; i < shoppingCard.length; i++){
@@ -100,7 +112,7 @@ function adjustStockBasedOnShoppingCard(stockList, shoppingCard){
     }
 }
 
-adjustStockBasedOnShoppingCard(stock, shopping_cart);
+// adjustStockBasedOnShoppingCard(stock, shopping_cart);
 
 
 
@@ -119,12 +131,50 @@ adjustStockBasedOnShoppingCard(stock, shopping_cart);
 // milk: 1.59
 
 // YOUR SOLUTION //
-// ... //
+const price = [
+    {
+        nameProduct: "bananas",
+        valueProduct: 0.3,
+    },
+    {
+        nameProduct: "apples",
+        valueProduct: 0.56,
+    },
+    {
+        nameProduct: "bread",
+        valueProduct: 1.29,
+    },
+    {
+        nameProduct: "milk",
+        valueProduct: 1.59,
+    },
+
+]
 
 // 4. Task: Cash Flow
 // Given is another shopping cart of a customer
 // Calculate the price for the shopping cart and save it in variable called 'price'
 shopping_cart2 = [["bananas", 4], ["milk", 1], ["bread", 2]]
+
+function multipication(dig1, dig2){
+    return dig1 * dig2;
+}
+
+findItems(price, "bread");
+
+function itemSum(stockItem, amount){
+    for (const prop in stockItem){
+        if (prop === "valueProduct"){
+            let res = multipication(stockItem[prop], amount);
+            console.log(`${res}`);
+        }
+    }
+}
+
+itemSum({nameProduct: "bananas", valueProduct: 0.3}, 4);
+
+
+
 
 // YOUR SOLUTION //
 // ... //
