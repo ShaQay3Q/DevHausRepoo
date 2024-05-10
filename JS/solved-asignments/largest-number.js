@@ -6,9 +6,7 @@
 // normal FOR loop
 function findLargestNumber(arrNumber){
     let largest = 0
-    if (arrNumber.length === 0){
-        return console.log(`the list is empty`);
-    }
+    if (arrNumber.length === 0) return null; //returns null. Else it would have return "undefined"
     for (let i = 0; i < arrNumber.length; i++){
         if (arrNumber[i] > largest){
             largest = arrNumber[i];
