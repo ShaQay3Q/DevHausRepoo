@@ -8,6 +8,6 @@ console.log("EXERCISE 5");
 const students = ["Christina", "Jon", "Alexandare"];
 
 // Write your code here
-const [firstNameOne, firstNameTwo, firstNameThree, lastName="null"] = students;
+const [, , lastName] = students;
 
 console.log(lastName);
