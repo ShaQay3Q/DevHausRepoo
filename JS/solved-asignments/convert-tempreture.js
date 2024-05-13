@@ -6,10 +6,10 @@
 // Return the converted temperature.
 
 function temperatureConverter01(degree, unit){
-    if (unit === "celsius" || "c"){
+    if (unit === "celsius" || unit === "c"){
         degree = (degree * 9/5) + 32;
         
-    } else if (unit === "fahrenheit" || "f"){
+    } else if (unit === "fahrenheit" || unit === "f"){
         degree = (degree - 32) * 5/9;
     } else {
         return console.log("enter either celsius or c, or fahrenheit or f");
@@ -20,7 +20,7 @@ function temperatureConverter01(degree, unit){
 temperatureConverter01(0, "f");
 
 function fahrenheitToCelsiusConv(degree){
-    return degree = (degree * 9/5) + 32;
+    return degree = (32*degree * 9/5) + 32;
 }
 
 function celsiusToFahrenheitConv(degree){
@@ -29,13 +29,13 @@ function celsiusToFahrenheitConv(degree){
 
 function temperatureConverter02(degree, unit){
     switch (unit){
-        case ("f"):
-            return console.log(`${fahrenheitToCelsiusConv(degree)} ${unit}`); 
-        case ("c"):
-            return console.log(`${celsiusToFahrenheitConv(degree)} ${unit}`);
+        case "f":
+            return fahrenheitToCelsiusConv(degree); 
+        case "c":
+            return celsiusToFahrenheitConv(degree);
         default:
-            return console.log("enter either celsius or c, or fahrenheit or f");
+            return "enter either celsius or c, or fahrenheit or f";
     }
 }
 
-temperatureConverter02(0, "f");
+console.log(`${temperatureConverter02(0, "f")}`);
