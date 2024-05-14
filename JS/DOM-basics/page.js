@@ -6,7 +6,7 @@ const [decrement, increment, reset] = document.getElementsByTagName("button");
 let count = 0;
 
 decrement.addEventListener("click", () => {
-    while (count > 0){ 
+    if (count > 0){ 
         count--;
         countElement.innerText = count;
     }
