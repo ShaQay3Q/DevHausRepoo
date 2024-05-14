@@ -51,6 +51,7 @@ function winnersFromCountry(listWinners, countryName){
     for (let i = 0; i < listWinners.length; i++){
         let country = listWinners[i][2];
         if (country === countryName){
+            console.log("\n");
             console.log(`${i}- winner of ${listWinners[i][0]}: ${listWinners[i][1]}`);
         }
     }

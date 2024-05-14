@@ -44,6 +44,8 @@ if (bonusResult !== NaN) {
   console.error("\x1b[31m", `Expected NaN got ${bonusResult}`, "\x1b[0m");
 }
 
-if (resultOne === 15 && resultTwo === 10 && bonusResult === NaN) {
+if (resultOne === 15 && resultTwo === 10 && bonusResult === NaN) {    console.log("\n");
+console.log("\n");
+
   console.log("\x1b[32m", "Congratulations, you got it right", "\x1b[0m");
 }

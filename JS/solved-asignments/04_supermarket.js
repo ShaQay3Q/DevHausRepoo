@@ -106,13 +106,16 @@ function adjustStock(stockItem, amount){
 
 function adjustStockBasedOnShoppingCard(stockList, shoppingCard){
     for (let i = 0; i < shoppingCard.length; i++){
-        let item = shoppingCard[i][0];
-        let value = shoppingCard[i][1];
-        adjustStock(findItems(stockList, item), value);
+        // let item = shoppingCard[i][0];
+        // let value = shoppingCard[i][1];
+        adjustStock(findItems(stockList, shoppingCard[i][0]), shoppingCard[i][1]);
     }
 }
 
 // adjustStockBasedOnShoppingCard(stock, shopping_cart);
+
+
+
 
 
 
@@ -180,9 +183,9 @@ itemSum({nameProduct: "bananas", valueProduct: 0.3}, 4);
 function totalSum(stockList, shoppingCard){
     let sum = 0;
     for (let i = 0; i < shoppingCard.length; i++){
-        let item = shoppingCard[i][0];
-        let value = shoppingCard[i][1];
-        sum = itemSum(findItems(stockList, item), value) + sum;
+        // let item = shoppingCard[i][0];
+        // let value = shoppingCard[i][1];
+        sum = itemSum(findItems(stockList, shoppingCard[i][0]), shoppingCard[i][1]) + sum;
     }
     return sum;
 }
@@ -193,3 +196,32 @@ console.log(`total costs of shopping_car2 is: ${costs}`);
 
 
 
+const inStock = [
+    ["bananas", 24],
+    ["apples", 36],
+    ["bread", 18],
+    ["milk", 54],
+]
+
+for (let item of inStock){
+    let iName = item[0];
+    let iQuantity = item[1];
+
+
+    console.log(`${iName}, ${iQuantity}`);
+    console.log(`${item}`);
+}
+
+const inStockPrice = [
+    ["bananas", 0.3],
+    ["apples", 0.56],
+    ["bread", 1.29],
+    ["milk", 1.59],
+]
+
+for (let item of inStock){
+    let iName = item[0];
+    let iQuantity = item[1];
+
+
+}

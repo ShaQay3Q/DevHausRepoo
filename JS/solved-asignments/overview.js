@@ -16,6 +16,8 @@ function addOddNumbers(arrOfNumbers){
     return sum;
 }
 
-const arr = [1, 3, 4, 7, 11, 34, 6, 7, 9, 43, 65, 23, 65];
+const arr1 = [1, 3, 4, 7, 11, 34, 6, 7, 9, 43, 65, 23, 65];
+const arr2 =[3, 4, 1, 23, 423];
 
-console.log(`${addOddNumbers(arr)}`);
+console.log(`${addOddNumbers(arr1)}`);
+console.log(`${addOddNumbers(arr2)}`);

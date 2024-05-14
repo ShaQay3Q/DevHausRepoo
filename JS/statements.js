@@ -54,3 +54,12 @@ function getDrinks(category){
 
 console.log(getDrinks(ageCheck(14)));
 console.log(getDrinks(checkAge(109)));
+
+
+let drink = getDrinks(16);
+let food = drink == "milk" ? "cookies" : "tofu";
+console.log(food);
+
+drink = getDrinks(106);
+food = drink == "milk" ? "cookies" : drink == "beer" ? "tofu" : "air!"
+console.log(food);
