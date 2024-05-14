@@ -6,8 +6,11 @@ const fruits = ["Apple", "Orange", "Banana"];
 
 // ----------------------------------------------------------------------------------
 // Your code
-const newFruits = [...fruits];
-newFruits.unshift("Pear");
+// const newFruits = [...fruits];
+// newFruits.unshift("Pear");
+
+const newFruits = ["pear", ...fruits];
+
 // ----------------------------------------------------------------------------------
 
 // Result
