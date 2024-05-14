@@ -7,11 +7,13 @@ const fruitsTwo = ["Pear", "Cherry", "Blueberry"];
 
 // ----------------------------------------------------------------------------------
 // Your code
-const combinedFruits = [...fruitsOne];
-for (let index = 0; index < fruitsTwo.length; index++) {
-  const fruit = fruitsTwo[index];
-  combinedFruits.push(fruit);
-}
+// const combinedFruits = [...fruitsOne];
+// for (let index = 0; index < fruitsTwo.length; index++) {
+//   const fruit = fruitsTwo[index];
+//   combinedFruits.push(fruit);
+// }
+
+const combinedFruits = [...fruitsOne, fruitsTwo];
 // ----------------------------------------------------------------------------------
 
 // Result
