@@ -32,8 +32,16 @@ companyName.innerHTML = "Cloud Factory";
 // const child = document.getElementById("jobs");
 // parent.removeChild(child);
 
-const elmnt = document.getElementById("jobs");
-elmnt.remove();
+//1st way:
+// const elmnt = document.getElementById("jobs");
+// elmnt.remove();
+// =
+// document.getElementById("jobs").remove();
+
+//2nd way:
+
+document.querySelector("#jobs").style.display = "none";
+
 
 //     Add a new element to the header-list with the inner-HTML being "Career".
 
@@ -47,4 +55,4 @@ elementLi.appendChild(para);
 
 
 
-// document.body.
+//     Shorten the description on the page: make it show "Welcome to the home!".
