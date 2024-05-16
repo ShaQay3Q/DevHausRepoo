@@ -1,36 +1,46 @@
 // 1. get elements by ID
-// 1.1 todoInput
-// 1.2 taskButton
-// 1.3 todoList
+const todoInput = document.getElementById('todoInput'); // 1.1 todoInput
+const taskButton = document.getElementById('taskButton'); // 1.2 taskButton
+const todoList = document.getElementById('todoList'); // 1.3 todoList
 
 // 2. create Event Listener for adding tasks
-// - listen for click on taskButton
-// - get input from todoInput
-// - create a new 'li' element
-// - append new 'li' element to todoList
+function addTask() {
+    const newItem = todoInput.value.trim();
+    if (newItem === "") {
+        alert("Empty item...");
+        return;
+    }
+    const newTask = document.createElement('tr');
+    newTask.innerHTML = `
+    <th></th>
+    <td><input type="checkbox"></td>
+    <td><span>${newItem}</span><td>
+    <td><button class="removeBtn btn btn-outline-danger">Remove</button></td>`;
+    todoList.appendChild(newTask);
+    todoInput.value = '';
+}
+
+taskButton.addEventListener('click', addTask);
+
+todoInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        addTask();
+    }
+})
+
 
 // 3. create Event Listener for completing tasks
 
-
-let toDoIput = document.getElementById("todoinput");
-let btn = document.getElementById("add-btn");
-let list = document.getElementById("todolist");
-
-btn.addEventListener("click", () => {
-
-    const newItem = toDoIput.value.trim();
-
-    if (toDoIput === ""){
-        alert("Empty");
-        return
+todoList.addEventListener('click', (event) => {
+    // check if target it the checkbox
+    if (event.target.type === 'checkbox') {
+        // get text element next to it
+        const todoText = event.target.parentElement.nextElementSibling;
+        // toggle completed
+        todoText.classList.toggle('completed');
     }
-    else {
-        const newTask = document.createElement("li");
-        newTask.innerHTML = newItem;
-        list.appendChild(newTask);
-
-
+    // check if target is the button
+    if (event.target.classList.contains("removeBtn")) {
+        event.target.parentElement.parentElement.remove();
     }
-
 })
-
