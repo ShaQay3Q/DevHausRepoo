@@ -47,3 +47,27 @@ function displayTasks(tasks: Task[]) {
 const tasks: Task[] = [task1, task2];
 displayTasks(tasks); // Will cause issues because of the incorrect element in the array
  
+
+// Task 4
+// Function to get full name as a string
+
+interface Person{
+    firstName?: string,
+
+    // the ? is there to indicated the optionality of the mentioned property
+    lastName?: string
+}
+
+function getFullName(person: Person) {
+
+    return person.firstName + ' ' + person.lastName;
+}
+
+const person1 = {firstName: 'John', lastName: 'Doe'};
+const person2 = {firstName: 'Lila'};
+
+console.log(getFullName(person1));
+console.log(getFullName(person2));
+
+// Fix this code with typescript
+// declare a new person-Interface

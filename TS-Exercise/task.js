@@ -27,3 +27,12 @@ function displayTasks(tasks) {
 }
 var tasks = [task1, task2];
 displayTasks(tasks); // Will cause issues because of the incorrect element in the array
+function getFullName(person) {
+    return person.firstName + ' ' + person.lastName;
+}
+var person1 = { firstName: 'John', lastName: 'Doe' };
+var person2 = { firstName: 'Lila' };
+console.log(getFullName(person1));
+console.log(getFullName(person2));
+// Fix this code with typescript
+// declare a new person-Interface
