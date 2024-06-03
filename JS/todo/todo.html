@@ -14,21 +14,33 @@
 
     <div class="container">
         <h1>To-Do List</h1>
-        <input type="text" placeholder="To-Do Item" id="todoInput">
-        <!-- <input type="button" value="Add Task"></input> -->
-        <button id="taskButton" class="btn btn-primary">Add Task</button>
+        <form id="todoForm">
+            <div class="form-group">
+                <input type="text" placeholder="To-Do Item" id="todoInput" name="item">
+            </div>
+
+            <div class="form-group">
+                <label for="deadline">Deadline:</label>
+                <input type="date" id="deadline" name="deadline">
+            </div>
+
+            <button type="submit" id="taskButton" class="btn btn-primary">Add Task</button>
+        </form>
+
         <table class="table">
             <thead>
                 <tr>
                     <th></th>
                     <th>Done</th>
                     <th>To-Do</th>
+                    <th>Deadline</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody id="todoList">
                 <!-- <tr>
                     <th scope="row"></th>
+                    <td></td>
                     <td>Mark</td>
                     <td>Otto</td>
                     <td>@mdo</td>

@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "compile": "tsc test.ts",
+    "compile:watch": "tsc -w test.ts"
+  }
+}
