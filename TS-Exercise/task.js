@@ -8,7 +8,7 @@ function createTask(taskName, taskDueDate) {
     };
 }
 const task1 = createTask("Buy groceries", "2024-05-20");
-const task2 = createTask("Call Bob", null); // Potential issue with null dueDate
+const task2 = createTask("Call Bob", "2024-05-20"); // Potential issue with null dueDate
 console.log(task1); // { name: 'Buy groceries', dueDate: '2024-05-20', completed: false }
 console.log(task2); // { name: 'Call Bob', dueDate: null, completed: false }
 // TASK 2
