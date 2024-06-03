@@ -3,7 +3,7 @@
     "typescript": "^5.4.5"
   },
   "scripts": {
-    "compile": "tsc test.ts",
+    "compile": "tsc task.ts",
     "compile:watch": "tsc -w test.ts"
   }
 }

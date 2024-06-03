@@ -1,4 +1,3 @@
-"use strict";
 // TASK 1
 // npm install <package>  install <package> n to create a new task
 function createTask(taskName, taskDueDate) {
@@ -7,8 +6,8 @@ function createTask(taskName, taskDueDate) {
         isCompleted: false
     };
 }
-const task1 = createTask("Buy groceries", "2024-05-20");
-const task2 = createTask("Call Bob", "2024-05-20"); // Potential issue with null dueDate
+var task1 = createTask("Buy groceries", "2024-05-20");
+var task2 = createTask("Call Bob", "2024-05-20"); // Potential issue with null dueDate
 console.log(task1); // { name: 'Buy groceries', dueDate: '2024-05-20', isCompleted: false }
 console.log(task2); // { name: 'Call Bob', dueDate: null, isCompleted: false }
 // TASK 2
@@ -22,9 +21,9 @@ console.log(task1); // { name: 'Buy groceries', dueDate: '2024-05-20', isComplet
 // TASK 3
 // Function to display tasks
 function displayTasks(tasks) {
-    tasks.forEach(task => {
-        console.log(`${task.name} - Due: ${task.dueDate} - isCompleted: ${task.isCompleted}`);
+    tasks.forEach(function (task) {
+        console.log("".concat(task.name, " - Due: ").concat(task.dueDate, " - isCompleted: ").concat(task.isCompleted));
     });
 }
-const tasks = [task1, task2];
+var tasks = [task1, task2];
 displayTasks(tasks); // Will cause issues because of the incorrect element in the array
