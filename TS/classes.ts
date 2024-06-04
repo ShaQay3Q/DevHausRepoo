@@ -1,9 +1,10 @@
 class Car {
-    // field member
+    // Field member
     readonly brand: string;
     year: number;
     color: string;
     isAvailable: boolean;
+    private customer: string;
 
     // Constructor
     constructor(brandName: string, yearBuild: number, colorType: string) {
@@ -11,6 +12,7 @@ class Car {
         this.year = yearBuild;
         this.color = colorType;
         this.isAvailable = true;
+        this.customer = "";
     }
 
     // Method: function inside a class
@@ -21,10 +23,19 @@ class Car {
     // Method: rent()
     // - check if car is available
     // - if so: change status of isAvailable
-    rent() {
-        if (this.isAvailable){
-            this.isAvailable = false
+    rent(customerName: string) {
+        if (this.isAvailable) {
+            this.isAvailable = false;
+            this.customer = customerName;
+            console.log(`Car from ${this.brand} is rentend.`);
+        } else {
+            console.log(`Car from ${this.brand} is already rented.`);
         }
+    }
+
+    // GET methods
+    getCustomer() {
+        return this.customer;
     }
 }
 
@@ -41,6 +52,9 @@ yourCar.color = "black";
 
 // call method
 yourCar.drive();
-console.log(yourCar.isAvailable);
-yourCar.rent();
-console.log(yourCar.isAvailable);
+
+yourCar.rent("Lisa");
+yourCar.rent("Hannah");
+
+// call get method
+console.log(yourCar.getCustomer());
